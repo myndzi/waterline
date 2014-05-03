@@ -21,12 +21,12 @@
     "lodash": "~2.4.1",
     "async": "~0.7.0",
     "anchor": "~0.10.0",
-    "q": "~1.0.1",
     "waterline-schema": "~0.1.10",
     "node-switchback": "~0.0.4",
     "waterline-criteria": "~0.10.6",
     "prompt": "~0.2.12",
-    "deep-diff": "~0.1.6"
+    "deep-diff": "~0.1.6",
+    "bluebird": "^1.2.4"
   },
   "devDependencies": {
     "mocha": "1.9.x",
