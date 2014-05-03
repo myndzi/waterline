@@ -75,8 +75,6 @@ describe('instance methods', function() {
         person.save(function(err) {
           assert(err);
           done();
-        }).catch(function(err) {
-          //noop
         });
       });
     });

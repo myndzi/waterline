@@ -128,8 +128,6 @@ describe('Model', function() {
             assert(err[1].type === 'remove');
 
             done();
-          }).catch(function(err) {
-            //noop
           });
         });
       });
