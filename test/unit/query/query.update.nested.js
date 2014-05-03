@@ -52,7 +52,7 @@ describe('Collection Query', function() {
       });
 
       it('should reduce the nested object down to a foreign key', function(done) {
-        query.update({}, { name: 'foo', nestedModel: { id: 1337, name: 'joe' }}, function(err, status) {
+        query.update({}, { id: 1, name: 'foo', nestedModel: { id: 1337, name: 'joe' }}, function(err, status) {
           assert(!err);
           assert(status[0].nestedModel);
           assert(status[0].nestedModel === 1337);

@@ -50,8 +50,11 @@ describe('Collection Promise', function () {
       }).then(function (test) {
         assert(test === 'test');
         done();
-      }).fail(function (err) {
+      }, function (err) {
         done(err);
+      }).catch(function () {
+          console.log('wat');
+          process.exit();
       });
     });
 
@@ -60,8 +63,11 @@ describe('Collection Promise', function () {
         throw new Error("Error in promise handler");
       }).then(function (unexpected) {
         done(new Error("Unexpected success"));
-      }).fail(function (expected) {
+      }, function (expected) {
         done();
+      }).catch(function () {
+          console.log('wat');
+          process.exit();
       });
     });
 
@@ -70,8 +76,11 @@ describe('Collection Promise', function () {
         throw new Error("Error in promise handler");
       }).then(function (unexpected) {
         done(new Error("Unexpected success"));
-      }).fail(function (expected) {
+      }, function (expected) {
         done();
+      }).catch(function () {
+          console.log('wat');
+          process.exit();
       });
     });
   });
